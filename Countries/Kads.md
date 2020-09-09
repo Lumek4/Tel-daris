@@ -1,2 +1,2 @@
-# Kads
-Kraina z ktorej pochodzi postac Zysi.
+# K¹dœ
+Kraina z której pochodzi postaæ Zysi.
