@@ -1,2 +1,2 @@
-# K¹dœ
-Kraina z której pochodzi postaæ Zysi.
+ï»¿# KÄ…dÅ›
+Kraina z ktÃ³rej pochodzi postaÄ‡ Zysi.
