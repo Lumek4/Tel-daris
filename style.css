@@ -30,11 +30,9 @@ h2 {
 
 .serif, body{
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	text-shadow: 2px 2px 2px #fff;
 }
 .sans, p, li{
   font-family: Verdana, Geneva, sans-serif;
-	text-shadow: 0px 0px;
 }
 
 
@@ -64,7 +62,6 @@ h2 {
 
 /* Visual style */
 .contrast {
-  background-color:black;
-	text-shadow:none;
+  background-color:black; 
   color:white;
 }
