@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="jquery.js"></script>
+	<script>
+	$().ready(function() {
+		$('#navi').load( 'index.html', function () {
+			alert('Request complete');
+		});
+		$("#text").html("Text added by jQuery code.");
+	});
+	</script>
+</head>
+
+<body>
+
+	<div id="navi">
+	test
+	</div>
+	<div id="text">
+	test
+	</div>
+</body>
+</html>
