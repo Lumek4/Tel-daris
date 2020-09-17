@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="jquery.js"></script>
 	<script>
-	$('#navi').load( 'nav.html');
+	$('#navi').load( 'nav.html', function () {
+		alert("done");
+	}));
 	</script>
 </head>
 <body>
