@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <title>Tel-daris</title>
@@ -16,30 +15,20 @@
 
 <div class="row">
 	<div class="column right">
-		<h2>Nazwy państw</h2>
-		<p>Gabil-draukat - wielkie domy</p><br>
-		<p>Port Onzar<br>
-			</p>
-		<h2>Bóstwa</h2>
-		<p>Gabil-draukat - wielkie domy</p><br>
-		<p>Port Onzar<br>
-			</p>
-
+		<h2>Mapa świata</h2>
+		<img src="Tel'daris.jpg" alt="Mapa Tel'daris" width=80% height=80%></img>
+		<p>(Work in progress)</p><br>
 	</div>
-	<nav class="column left " style="background-color:#ccc">
-		<h2>Spis treści</h2>
-		<br><hr>
-		<ul>
-			<li><a href="#">Jeszcze tu nic nie ma</a></li>
-			<li><a href="#">Yup, wciąż nic</a></li>
-			<li><a href="#">Wróć później, gdy będę miał nowe towary</a></li>
-		</ul>
+	<nav id="nav" class="column left " style="background-color:#ccc">
+	<object height="100%" type="text/html" data="nav.html" ></object>
 	</nav>
 	
 </div>
 
 <div class="push"></div>
 </div>
+<script>
+</script>
 <!-- Footer -->
 <footer  class="contrast footer" style="padding:10px">
 	<h3>Piotr Krasowski, 2020</h3>

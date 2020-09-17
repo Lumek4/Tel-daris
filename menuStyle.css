@@ -1,0 +1,33 @@
+html{-
+ms-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+}
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+
+body{
+}
+h1 {
+  font-size: 50px
+}
+h2 {
+	font-size: 40px;
+}
+
+.serif, body{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.sans, p, li{
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+
+/* Visual style */
+.contrast {
+  background-color:black; 
+  color:white;
+}
