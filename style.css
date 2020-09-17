@@ -20,6 +20,12 @@ h1 {
 h2 {
 	font-size: 40px;
 }
+p {
+	margin-bottom:0.7em
+}
+.tab {
+	margin-left: 20px;
+}
 .content {
 	min-height:100%;
 	margin-bottom: -50px;
