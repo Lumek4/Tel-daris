@@ -5,11 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="Style/style.css">
 	<script src="JQuery/jquery.js"></script>
-	<!--<script>
-	$().ready(function() {
-		$('#navi').load( 'nav.html');
-	});
-	</script>-->
+	
 </head>
 <body>
 <div class="content">
@@ -27,6 +23,13 @@
 	</div>
 	
 	<iframe src = "nav.html" class="column left " style="background-color:#ccc">
+		<script>
+			$().ready(function() {
+				$('#navi').load( 'nav.html');
+			});
+		</script>
+		<nav id="navi" class="column left " style="background-color:#ccc">
+		</nav>
 	</iframe>
 	
 </div>
