@@ -18,6 +18,13 @@
 		jQuery("[id='_life'		]").html("<span class=\"tooltip\">💖<span class=\"tooltiptext\">Life</span></span>");
 		jQuery("[id='_light'	]").html("<span class=\"tooltip\">☀️<span class=\"tooltiptext\">Light</span></span>");
 		jQuery("[id='_forge'	]").html("<span class=\"tooltip\">🔨<span class=\"tooltiptext\">Forge</span></span>");
+		
+		jQuery("[id='_chaotic'	]").html("<span class=\"tooltip\">🌀<span class=\"tooltiptext\">Chaotic</span></span>");
+		jQuery("[id='_lawful'	]").html("<span class=\"tooltip\">⚖️<span class=\"tooltiptext\">Lawful</span></span>");
+		jQuery("[id='_evil'		]").html("<span class=\"tooltip\">👿<span class=\"tooltiptext\">Evil</span></span>");
+		jQuery("[id='_good'		]").html("<span class=\"tooltip\">👼<span class=\"tooltiptext\">Good</span></span>");
+		jQuery("[id='_unaligned']").html("<span class=\"tooltip\">🏳️<span class=\"tooltiptext\">Unaligned</span></span>");
+		
 	});
 	</script>
 </head>
@@ -36,25 +43,25 @@
 <div class="tab">
 	<h3>Trójca księżyca:</h3>
 	<p class="tab">
-		Loki (U) – bóg oszustwa, podstępu, iluzji <span id="_trickery"></span><br>
-		Elune (U) – bogini dobrych druidów i lykantropów, dzikiej natury, morza, pogody <span id="_tempest"></span><span id="_nature"></span><br>
-		Sehanine (U) – bogini opiekunka elfów, sztuki, piękna, gwiazd, czystości <span id="_knowledge"></span> <br>
+		Loki <span id="_unaligned"></span> – bóg oszustwa, podstępu, iluzji <span id="_trickery"></span><br>
+		Elune <span id="_unaligned"></span> – bogini dobrych druidów i lykantropów, dzikiej natury, morza, pogody <span id="_tempest"></span><span id="_nature"></span><br>
+		Sehanine <span id="_unaligned"></span> – bogini opiekunka elfów, sztuki, piękna, gwiazd, czystości <span id="_knowledge"></span> <br>
 	</p>
 	<p>
-	Managarm (CE) – bóg nienawiści, złych lykantropów, konfliktu <span id="_war"></span><span id="_death"></span><br>
-	Pelor (NG) – bóg słońca, prawdy, dobra, życia <span id="_life"></span><span id="_light"></span><br>
-	Moradin (LG) – bóg opiekun krasnoludów, rzemieślnictwa, rodziny, społeczności <span id="_life"></span><span id="_forge"></span> <br>
-	Asmodeusz, diabeł (CE) – bóg tyranii, dominacji, władzy <span id="_war"></span> <br>
-	Krucza Królowa (U) – bogini, pani śmierci, strażnik przeznaczenia <span id="_death"></span> <br>
-	Erathis (LN) – bogini cywilizacji, wynalazków, rozwoju umiejętności i nauki <span id="_knowledge"></span><span id="_forge"></span><br>
+	Managarm <span id="_chaotic"></span><span id="_evil"></span> – bóg nienawiści, złych lykantropów, konfliktu <span id="_war"></span><span id="_death"></span><br>
+	Pelor <span id="_lawful"></span> – bóg słońca, prawdy, dobra, życia <span id="_life"></span><span id="_light"></span><br>
+	Moradin <span id="_lawful"></span><span id="_good"></span> – bóg opiekun krasnoludów, rzemieślnictwa, rodziny, społeczności <span id="_life"></span><span id="_forge"></span> <br>
+	Asmodeusz, diabeł <span id="_chaotic"></span><span id="_evil"></span> – bóg tyranii, dominacji, władzy <span id="_war"></span> <br>
+	Krucza Królowa <span id="_unaligned"></span> – bogini, pani śmierci, strażnik przeznaczenia <span id="_death"></span> <br>
+	Erathis <span id="_lawful"></span> – bogini cywilizacji, wynalazków, rozwoju umiejętności i nauki <span id="_knowledge"></span><span id="_forge"></span><br>
 	</p>
 </div>
 <h2>Mniejsi bogowie:</h2>
 <p class="tab">
-	Azurah (CG) – bogini opiekunka tabaxi, pani wschodu i zachodu, zmian, podróży <span id="_trickery"></span><span id="_tempest"></span><br>
-	Bahamut platynowy smok (LG) – bóg honoru, sprawiedliwości, moralności, zasad <span id="_life"></span><span id="_forge"></span><br>
-	Tiamat, pięciogłowy chromatyczny smok (LE) – bogini chciwości, zniszczenia, zazdrości <span id="_war"></span><span id="_trickery"></span> <br>
-	Vecna, licz (NE) – bóg tajemnic, nieśmiertelności, nieumarłych <span id="_knowledge"></span><span id="_death"></span><br>
+	Azurah <span id="_chaotic"></span><span id="_good"></span> – bogini opiekunka tabaxi, pani wschodu i zachodu, zmian, podróży <span id="_trickery"></span><span id="_tempest"></span><br>
+	Bahamut, platynowy smok <span id="_lawful"></span><span id="_good"></span> – bóg honoru, sprawiedliwości, moralności, zasad <span id="_life"></span><span id="_forge"></span><br>
+	Tiamat, pięciogłowy chromatyczny smok <span id="_lawful"></span><span id="_evil"></span> – bogini chciwości, zniszczenia, zazdrości <span id="_war"></span><span id="_trickery"></span> <br>
+	Vecna, licz <span id="_evil"></span> – bóg tajemnic, nieśmiertelności, nieumarłych <span id="_knowledge"></span><span id="_death"></span><br>
 </p>
 	</div>
 	
