@@ -1,4 +1,4 @@
 
 	$().ready(function() {
-		$('#navi').load( '/nav.html');
+		$('#navi').load( 'nav.html');
 	});
