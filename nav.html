@@ -17,10 +17,12 @@ $().ready(function (){
 	for(var i = 0; i<depth; i++){
 		path += '../';
 	}
-	$("footer").text(path);
+	//$("footer").text(path);
 	$("a").attr("href", function(i, href) {
-		if(href.includes('#'))
+		if(href.includes('#')){
+			$("footer").text(href);
 			return href;
+		}
 		return path + href;
 	});
 });
