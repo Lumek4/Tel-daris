@@ -6,12 +6,12 @@
 	<link rel="stylesheet" href="/Style/style.css">
 	<link rel="stylesheet" href="/Style/hoverStyle.css">
 	<base href="https://lumek4.github.io/Tel-daris/">
-	<script src="/JQuery/jquery.js"></script>
-	<script src="/JQuery/jquery.csv.js"></script>
+	<script src="JQuery/jquery.js"></script>
+	<script src="JQuery/jquery.csv.js"></script>
 	<script>
 	$().ready(function() {
-		$('#navi').load( '/nav.html');
-		jQuery.get('/Resources/pantheon.csv', function fun(data){
+		$('#navi').load( 'nav.html');
+		jQuery.get('Resources/pantheon.csv', function fun(data){
 			var arr = $.csv.toArrays(data, {separator:';', delimiter:'\n'});
 			$('#table').html(makeTableHTML(arr));
 			
