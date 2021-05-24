@@ -11,6 +11,6 @@
 			path += '../';
 		}
 		path += 'nav.html';
-		$("footer").text(path);
+		//$("footer").text(path);
 		$('#navi').load(path);
 	});
