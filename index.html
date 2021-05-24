@@ -6,33 +6,33 @@
 	<link rel="stylesheet" href="Style/style.css">
 	<link rel="stylesheet" href="Style/menuStyle.css">
 	<script type="text/javascript" src="JQuery/jquery.js"></script>
-	<script src="JQuery/loadNavi.js"></script>
+	<script src="JQuery/loadUtils.js"></script>
+	<script>
+		$().ready(function(){
+			$("nav").load(correctPath("nav.html"));
+		});
+	</script>
 </head>
 <body>
-<div class="content">
-<!-- Header -->
-<header id="myHeader" class="contrast" style="padding:10px; text-align:center">
-   <h1>Tel-daris</h1>
-   <p>Katalog świata</p>
-</header>
-
-<div class="row">
-	<div class="column right">
-		<h2>Mapa świata</h2>
-		<img src="Resources/Tel'daris.jpg" alt="Mapa Tel'daris" width=80% height=80%></img>
-		<p>(Work in progress)</p><br>
+<div class="flex-wrapper">
+	<div class="content">
+		<!-- Header -->
+		<header id="myHeader" class="contrast" style="padding:10px; text-align:center">
+		<h1>Tel-daris</h1>
+		<p>Katalog świata</p>
+		</header>
+		<div class="row">
+			<div class="column right">
+				<h2>Mapa świata</h2>
+				<img src="Resources/Tel'daris.jpg" alt="Mapa Tel'daris" width=80% height=80%></img>
+			</div>
+			<nav class="column left" style="background-color:#ccc"></nav>
+		</div>
 	</div>
-	<nav id="navi" class="column left " style="background-color:#ccc">
-	</nav>
-	
-	
+	<!-- Footer -->
+	<footer  class="contrast" style="padding:10px">
+		<h3>Piotr Krasowski, 2020 test</h3>
+	</footer>
 </div>
-
-<div class="push"></div>
-</div>
-<!-- Footer -->
-<footer  class="contrast footer" style="padding:10px">
-	<h3>Piotr Krasowski, 2020 test</h3>
-</footer>
 </body>
 </html>

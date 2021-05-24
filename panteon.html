@@ -8,7 +8,12 @@
 	<link rel="stylesheet" href="Style/menuStyle.css">
 	<script src="JQuery/jquery.js"></script>
 	<script src="JQuery/jquery.csv.js"></script>
-	<script src="JQuery/loadNavi.js"></script>
+	<script src="JQuery/loadUtils.js"></script>
+	<script>
+		$().ready(function(){
+			$("nav").load(correctPath("nav.html"));
+		});
+	</script>
 	<script>
 	$().ready(function() {
 		jQuery.get('Resources/pantheon.csv', function fun(data){
@@ -56,35 +61,32 @@
 	</script>
 </head>
 <body>
-<div class="content">
-<!-- Header -->
-<header id="myHeader" class="contrast" style="padding:10px; text-align:center">
-   <h1>Tel-daris</h1>
-   <p>Katalog świata</p>
-</header>
-
-<div class="row">
-	<div class="column right">
-		<table id="table">
-			<tr><td colspan="4">
-				<p>Nadbóg – Lord Ao – strażnik spójności panteonu, nie obchodzą go ludzie</p>
-			</td></tr>
-			<tr><td></td><td colspan="3">
-				<h2>Wielcy bogowie:</h2>
-			</td></tr>
-		</table>
+<div class="flex-wrapper">
+	<div class="content">
+	<!-- Header -->
+		<header id="myHeader" class="contrast" style="padding:10px; text-align:center">
+			<h1>Tel-daris</h1>
+			<p>Katalog świata</p>
+		</header>
+		<div class="row">
+			<div class="column right">
+				<table id="table">
+					<tr><td colspan="4">
+						<p>Nadbóg – Lord Ao – strażnik spójności panteonu, nie obchodzą go ludzie</p>
+					</td></tr>
+					<tr><td></td><td colspan="3">
+						<h2>Wielcy bogowie:</h2>
+					</td></tr>
+				</table>
+			</div>
+			<nav id="navi" class="column left " style="background-color:#ccc">
+			</nav>
+		</div>
 	</div>
-	<nav id="navi" class="column left " style="background-color:#ccc">
-	</nav>
-	
-
-<div class="push"></div>
+	<!-- Footer -->
+	<footer  class="contrast" style="padding:10px">
+		<h3>Piotr Krasowski, 2020</h3>
+	</footer>
 </div>
-<script>
-</script>
-<!-- Footer -->
-<footer  class="contrast footer" style="padding:10px">
-	<h3>Piotr Krasowski, 2020</h3>
-</footer>
 </body>
 </html>

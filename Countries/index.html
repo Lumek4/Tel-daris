@@ -6,7 +6,12 @@
 	<link rel="stylesheet" href="../Style/style.css">
 	<link rel="stylesheet" href="../Style/tabStyle.css">
 	<script src="../JQuery/jquery.js"></script>
-	<script src="../JQuery/loadNavi.js"></script>
+	<script src="../JQuery/loadUtils.js"></script>
+	<script>
+		$().ready(function(){
+			$("nav").load(correctPath("nav.html"));
+		});
+	</script>
     <script>
     /*https://www.w3schools.com/howto/howto_js_tabs.asp*/
     function openRegion(evt, regionName) {
@@ -30,52 +35,48 @@
     }
 	</script>
 </head>
-<body>
-<div class="content">
-<!-- Header -->
-<header id="myHeader" class="contrast" style="padding:10px; text-align:center">
-   <h1>Tel-daris</h1>
-   <p>Katalog świata</p>
-</header>
+<body class="flex-wrapper">
+    
+    <div class="content">
+    <!-- Header -->
+        <header id="myHeader" class="contrast" style="padding:10px; text-align:center">
+            <h1>Tel-daris</h1>
+            <p>Katalog świata</p>
+        </header>
+        <div class="row">
+            <div class="column right">
+                <h2>Regiony</h2>
+                    <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openRegion(event, 'Wesmiria')">London</button>
+                    <button class="tablinks" onclick="openRegion(event, 'Kads')">Paris</button>
+                    <button class="tablinks" onclick="openRegion(event, 'Gabil-draukat')">Tokyo</button>
+                </div>
 
-<div class="row">
-	<div class="column right">
-		<h2>Regiony</h2>
-            <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openRegion(event, 'Wesmiria')">London</button>
-            <button class="tablinks" onclick="openRegion(event, 'Kads')">Paris</button>
-            <button class="tablinks" onclick="openRegion(event, 'Gabil-draukat')">Tokyo</button>
+                <!-- Tab content -->
+                <div id="Wesmiria" class="tabcontent">
+                    <h3>Wesmiria</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+
+                <div id="Kads" class="tabcontent">
+                    <h3>Kądś</h3>
+                    <p>Paris is the capital of France.</p>
+                </div>
+
+                <div id="Gabil-draukat" class="tabcontent">
+                    <h3>Gabil-draukat</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
+            </div>
+            <nav class="column left " style="background-color:#ccc"></nav>
         </div>
 
-        <!-- Tab content -->
-        <div id="Wesmiria" class="tabcontent">
-            <h3>Wesmiria</h3>
-            <p>London is the capital city of England.</p>
-        </div>
 
-        <div id="Kads" class="tabcontent">
-            <h3>Kądś</h3>
-            <p>Paris is the capital of France.</p>
-        </div>
-
-        <div id="Gabil-draukat" class="tabcontent">
-            <h3>Gabil-draukat</h3>
-            <p>Tokyo is the capital of Japan.</p>
-        </div>
-		<p>(Work in progress)</p><br>
-	</div>
-	<nav id="navi" class="column left " style="background-color:#ccc">
-	</nav>
-	
-	
-</div>
-
-<div class="push"></div>
-</div>
+    </div>
 <!-- Footer -->
-<footer  class="contrast footer" style="padding:10px">
-	<h3>Piotr Krasowski, 2020 test</h3>
-</footer>
+    <footer  class="contrast" style="padding:10px">
+        <h3>Piotr Krasowski, 2020 test</h3>
+    </footer>
 </body>
 </html>

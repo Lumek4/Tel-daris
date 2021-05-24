@@ -1,6 +1,5 @@
 html{-ms-text-size-adjust:100%;
 -webkit-text-size-adjust:100%;
-height:100%
 }
 * {
   box-sizing: border-box;
@@ -10,7 +9,6 @@ height:100%
 
 
 body{
-  height:100%;
   background-color:AntiqueWhite;
 }
 h1 {
@@ -25,17 +23,19 @@ p {
 tr, td {
   padding: 5px 20px 0px 0px;
 }
-.indent {
-	margin-left: 20px;
-}
 .content {
-	min-height:100%;
-	margin-bottom: -50px;
+  min-height: 100vh;
+  flex-grow: 1;
 }
-.footer, .push {
-	height: 50px
+footer{
+	height: 50px;
 }
-
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .serif, body{
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
