@@ -4,8 +4,25 @@
 <title>Tel-daris</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<base href="https://lumek4.github.io/Tel-daris/">
-<link rel="stylesheet" href="Style/menuStyle.css">
+<!-- <base href="https://lumek4.github.io/Tel-daris/"> -->
+<!-- <script src="JQuery/jquery.js"></script> -->
+<script>
+$().ready(function (){
+	var location = window.location.origin;
+	var depth = window.location.pathname.split('/').length;
+	if(!location.includes('0.0')){
+		depth--;
+	}
+	var path = "";
+	for(var i = 0; i<depth; i++){
+		path += '../';
+	}
+	
+	$("a").attr("href", function(i, href) {
+		return path + href;
+	});
+});
+</script>
 </head>
 <body id="menu">
 		<h2>Spis treści</h2>
