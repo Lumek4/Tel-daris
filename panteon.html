@@ -3,27 +3,53 @@
 <head>
 	<title>Tel-daris</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="Style/style.css">
-	<link rel="stylesheet" href="Style/hoverStyle.css">
-	<script src="JQuery/jquery.js"></script>
+	<link rel="stylesheet" href="/Style/style.css">
+	<link rel="stylesheet" href="/Style/hoverStyle.css">
+	<script src="/JQuery/jquery.js"></script>
+	<script src="/JQuery/jquery.csv.js"></script>
 	<script>
 	$().ready(function() {
-		$('#navi').load( '/Tel-daris/nav.html');
-		jQuery("[id='_trickery'	]").html("<span class=\"tooltip\">🎭<span class=\"tooltiptext\">Trickery</span></span>");
-		jQuery("[id='_tempest'	]").html("<span class=\"tooltip\">⚡<span class=\"tooltiptext\">Tempest</span></span>");
-		jQuery("[id='_nature'	]").html("<span class=\"tooltip\">🌿<span class=\"tooltiptext\">Nature</span></span>");
-		jQuery("[id='_knowledge']").html("<span class=\"tooltip\">📖<span class=\"tooltiptext\">Knowledge</span></span>");
-		jQuery("[id='_war'		]").html("<span class=\"tooltip\">⚔️<span class=\"tooltiptext\">War</span></span>");
-		jQuery("[id='_death'	]").html("<span class=\"tooltip\">💀<span class=\"tooltiptext\">Death</span></span>");
-		jQuery("[id='_life'		]").html("<span class=\"tooltip\">💖<span class=\"tooltiptext\">Life</span></span>");
-		jQuery("[id='_light'	]").html("<span class=\"tooltip\">☀️<span class=\"tooltiptext\">Light</span></span>");
-		jQuery("[id='_forge'	]").html("<span class=\"tooltip\">🔨<span class=\"tooltiptext\">Forge</span></span>");
-		
-		jQuery("[id='_chaotic'	]").html("<span class=\"tooltip\">🌀<span class=\"tooltiptext\">Chaotic</span></span>");
-		jQuery("[id='_lawful'	]").html("<span class=\"tooltip\">⚖️<span class=\"tooltiptext\">Lawful</span></span>");
-		jQuery("[id='_evil'		]").html("<span class=\"tooltip\">👿<span class=\"tooltiptext\">Evil</span></span>");
-		jQuery("[id='_good'		]").html("<span class=\"tooltip\">👼<span class=\"tooltiptext\">Good</span></span>");
-		jQuery("[id='_unaligned']").html("<span class=\"tooltip\">🏳️<span class=\"tooltiptext\">Unaligned</span></span>");
+		$('#navi').load( '/nav.html');
+		jQuery.get('/Resources/pantheon.csv', function fun(data){
+			var arr = $.csv.toArrays(data, {separator:';', delimiter:'\n'});
+			$('#table').html(makeTableHTML(arr));
+			
+			jQuery("[id='_trickery'	]").html("<span class=\"tooltip\">🎭<span class=\"tooltiptext\">Trickery</span></span>");
+			jQuery("[id='_tempest'	]").html("<span class=\"tooltip\">⚡<span class=\"tooltiptext\">Tempest</span></span>");
+			jQuery("[id='_nature'	]").html("<span class=\"tooltip\">🌿<span class=\"tooltiptext\">Nature</span></span>");
+			jQuery("[id='_knowledge']").html("<span class=\"tooltip\">📖<span class=\"tooltiptext\">Knowledge</span></span>");
+			jQuery("[id='_war'		]").html("<span class=\"tooltip\">⚔️<span class=\"tooltiptext\">War</span></span>");
+			jQuery("[id='_death'	]").html("<span class=\"tooltip\">💀<span class=\"tooltiptext\">Death</span></span>");
+			jQuery("[id='_life'		]").html("<span class=\"tooltip\">💖<span class=\"tooltiptext\">Life</span></span>");
+			jQuery("[id='_light'	]").html("<span class=\"tooltip\">☀️<span class=\"tooltiptext\">Light</span></span>");
+			jQuery("[id='_forge'	]").html("<span class=\"tooltip\">🔨<span class=\"tooltiptext\">Forge</span></span>");
+			
+			jQuery("[id='_chaotic'	]").html("<span class=\"tooltip\">🌀<span class=\"tooltiptext\">Chaotic</span></span>");
+			jQuery("[id='_lawful'	]").html("<span class=\"tooltip\">⚖️<span class=\"tooltiptext\">Lawful</span></span>");
+			jQuery("[id='_evil'		]").html("<span class=\"tooltip\">👿<span class=\"tooltiptext\">Evil</span></span>");
+			jQuery("[id='_good'		]").html("<span class=\"tooltip\">👼<span class=\"tooltiptext\">Good</span></span>");
+			jQuery("[id='_unaligned']").html("<span class=\"tooltip\">🏳️<span class=\"tooltiptext\">Unaligned</span></span>");
+		});
+		function makeTableHTML(myArray) {
+			var result = $("[id='table']").html();
+			for(var i=0; i<myArray.length; i++) {
+				result += "<tr>";
+				
+				result += "<td style=\"text-align:center\"><span id=\""+myArray[i][0]+"\"></span>";
+				result += "<span id=\""+myArray[i][1]+"\"></span></td>";
+				result += "<td>"+myArray[i][2]+"</td>";
+				result += "<td>"+myArray[i][3]+"</td>";
+				result += "<td style=\"text-align:center\">";
+				for(var j = 4; j<myArray[i].length; j++){ 
+					result += "<span id=\""+myArray[i][j]+"\"></span>";
+					//result += "<td>"+myArray[i][j]+"</td>";
+				}
+				result += "</td>";
+				
+				result += "</tr>";
+			}
+			return result;
+		}
 		
 	});
 	</script>
@@ -38,37 +64,18 @@
 
 <div class="row">
 	<div class="column right">
-<p>Nadbóg – Lord Ao – strażnik spójności panteonu, nie obchodzą go ludzie</p>
-<h2>Wielcy bogowie:</h2>
-<div class="tab">
-	<h3>Trójca księżyca:</h3>
-	<p class="tab">
-		Loki <span id="_unaligned"></span> – bóg oszustwa, podstępu, iluzji <span id="_trickery"></span><br>
-		Elune <span id="_unaligned"></span> – bogini dobrych druidów i lykantropów, dzikiej natury, morza, pogody <span id="_tempest"></span><span id="_nature"></span><br>
-		Sehanine <span id="_unaligned"></span> – bogini opiekunka elfów, sztuki, piękna, gwiazd, czystości <span id="_knowledge"></span> <br>
-	</p>
-	<p>
-	Managarm <span id="_chaotic"></span><span id="_evil"></span> – bóg nienawiści, złych lykantropów, konfliktu <span id="_war"></span><span id="_death"></span><br>
-	Pelor <span id="_lawful"></span> – bóg słońca, prawdy, dobra, życia <span id="_life"></span><span id="_light"></span><br>
-	Moradin <span id="_lawful"></span><span id="_good"></span> – bóg opiekun krasnoludów, rzemieślnictwa, rodziny, społeczności <span id="_life"></span><span id="_forge"></span> <br>
-	Asmodeusz, diabeł <span id="_chaotic"></span><span id="_evil"></span> – bóg tyranii, dominacji, władzy <span id="_war"></span> <br>
-	Krucza Królowa <span id="_unaligned"></span> – bogini, pani śmierci, strażnik przeznaczenia <span id="_death"></span> <br>
-	Erathis <span id="_lawful"></span> – bogini cywilizacji, wynalazków, rozwoju umiejętności i nauki <span id="_knowledge"></span><span id="_forge"></span><br>
-	</p>
-</div>
-<h2>Mniejsi bogowie:</h2>
-<p class="tab">
-	Azurah <span id="_chaotic"></span><span id="_good"></span> – bogini opiekunka tabaxi, pani wschodu i zachodu, zmian, podróży <span id="_trickery"></span><span id="_tempest"></span><br>
-	Bahamut, platynowy smok <span id="_lawful"></span><span id="_good"></span> – bóg honoru, sprawiedliwości, moralności, zasad <span id="_life"></span><span id="_forge"></span><br>
-	Tiamat, pięciogłowy chromatyczny smok <span id="_lawful"></span><span id="_evil"></span> – bogini chciwości, zniszczenia, zazdrości <span id="_war"></span><span id="_trickery"></span> <br>
-	Vecna, licz <span id="_evil"></span> – bóg tajemnic, nieśmiertelności, nieumarłych <span id="_knowledge"></span><span id="_death"></span><br>
-</p>
+		<table id="table">
+			<tr><td colspan="4">
+				<p>Nadbóg – Lord Ao – strażnik spójności panteonu, nie obchodzą go ludzie</p>
+			</td></tr>
+			<tr><td></td><td colspan="3">
+				<h2>Wielcy bogowie:</h2>
+			</td></tr>
+		</table>
 	</div>
-	
 	<nav id="navi" class="column left " style="background-color:#ccc">
 	</nav>
 	
-</div>
 
 <div class="push"></div>
 </div>

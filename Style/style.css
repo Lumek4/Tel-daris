@@ -22,6 +22,9 @@ h2 {
 p {
 	margin-bottom:0.7em
 }
+tr, td {
+  padding: 5px 20px 0px 0px;
+}
 .indent {
 	margin-left: 20px;
 }
@@ -36,7 +39,7 @@ p {
 .serif, body{
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-.sans, p, li{
+.sans, p, li, tr, td{
   font-family: Verdana, Geneva, sans-serif;
 }
 
