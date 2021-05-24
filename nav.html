@@ -9,7 +9,7 @@
 <script>
 $().ready(function (){
 	var location = window.location.origin;
-	var depth = window.location.pathname.split('/').length-1;
+	var depth = window.location.pathname.split('/').length-2;
 	if(!location.includes('0.0')){
 		depth--;
 	}
@@ -17,7 +17,7 @@ $().ready(function (){
 	for(var i = 0; i<depth; i++){
 		path += '../';
 	}
-	
+	//$("footer").text(path);
 	$("a").attr("href", function(i, href) {
 		return path + href;
 	});
