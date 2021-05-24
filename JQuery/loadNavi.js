@@ -2,7 +2,7 @@
 	$().ready(function() {
 		var location = window.location.origin;
 		var depth = window.location.pathname.split('/').length;
-		if(!location.includes('0.0')){
+		if(location.includes('0.0')){
 			depth--;
 		}
 		var path = "";
