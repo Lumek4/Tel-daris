@@ -9,7 +9,7 @@
 <script>
 $().ready(function (){
 	var location = window.location.origin;
-	var depth = window.location.pathname.split('/').length;
+	var depth = window.location.pathname.split('/').length-1;
 	if(!location.includes('0.0')){
 		depth--;
 	}
