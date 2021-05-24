@@ -8,9 +8,9 @@
 	<link rel="stylesheet" href="Style/menuStyle.css">
 	<script src="JQuery/jquery.js"></script>
 	<script src="JQuery/jquery.csv.js"></script>
+	<script src="JQuery/loadNavi.js"></script>
 	<script>
 	$().ready(function() {
-		$('#navi').load( 'nav.html');
 		jQuery.get('Resources/pantheon.csv', function fun(data){
 			var arr = $.csv.toArrays(data, {separator:';', delimiter:'\n'});
 			$('#table').html(makeTableHTML(arr));
