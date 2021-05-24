@@ -6,7 +6,7 @@
 		if(!location.includes('0.0')){
 			depth--;
 		}
-		//$("footer").text(depth);
+		$("footer").text(depth);
 		var path = "";
 		for(var i = 0; i<depth; i++){
 			path += '../';
