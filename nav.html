@@ -19,6 +19,8 @@ $().ready(function (){
 	}
 	$("footer").text(path);
 	$("a").attr("href", function(i, href) {
+		if(href.includes('#'))
+			return href;
 		return path + href;
 	});
 });
