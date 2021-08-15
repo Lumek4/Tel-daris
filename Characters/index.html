@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tel-daris</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../Style/style.css">
+	<link rel="stylesheet" href="../Style/tabStyle.css">
+	<script src="../JQuery/jquery.js"></script>
+	<script src="../JQuery/loadUtils.js"></script>
+	<script>
+		$().ready(function(){
+			$("nav").load(correctPath("nav.html"));
+		});
+	</script>
+    <script>
+    /*https://www.w3schools.com/howto/howto_js_tabs.asp*/
+    function openRegion(evt, regionName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(regionName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+	</script>
+</head>
+<body class="flex-wrapper">
+    
+    <div class="content">
+    <!-- Header -->
+        <header id="myHeader" class="contrast" style="padding:10px; text-align:center">
+            <h1>Tel-daris</h1>
+            <p>Katalog świata</p>
+        </header>
+        <div class="row">
+            <div class="column right">
+                <h2>Postaci</h2>
+                    <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openRegion(event, 'Nott')">Nott</button>
+                    <button class="tablinks" onclick="openRegion(event, 'Adam')">Adam</button>
+                    <button class="tablinks" onclick="openRegion(event, 'Khamira')">Khamira</button>
+                    <button class="tablinks" onclick="openRegion(event, 'Arkan')">Arkan</button>
+                    <button class="tablinks" onclick="openRegion(event, 'Arkan')">Arkan</button>
+                </div>
+
+                <!-- Tab content -->
+                <div id="Wesmiria" class="tabcontent">
+                    <h3>Wesmiria</h3>
+                    <p>Coming soon</p>
+                </div>
+
+                <div id="Kads" class="tabcontent">
+                    <h3>Kądś</h3>
+                    <p>Coming soon</p>
+                </div>
+
+                <div id="Gabil-draukat" class="tabcontent">
+                    <h3>Gabil-draukat</h3>
+                    <p>Coming soon</p>
+                </div>
+            </div>
+            <nav class="column left " style="background-color:#ccc"></nav>
+        </div>
+
+
+    </div>
+<!-- Footer -->
+    <footer  class="contrast" style="padding:10px">
+        <h3>Piotr Krasowski, 2020 test</h3>
+    </footer>
+</body>
+</html>
